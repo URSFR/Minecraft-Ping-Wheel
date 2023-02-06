@@ -38,7 +38,7 @@ public class PingWheelClient implements ClientModInitializer {
 		kbSettings = KeyBindingHelper.registerKeyBinding(new KeyBinding("ping-wheel.key.open-settings", InputUtil.Type.KEYSYM, GLFW.GLFW_KEY_F6, "ping-wheel.name"));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
-			if (kbPing.wasPressed()) {
+			if (kbPing.wasPressed() && client.player.hasPermissionLevel(2)) {
 				Core.markLocation();
 			}
 
