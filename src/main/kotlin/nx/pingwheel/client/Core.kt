@@ -30,7 +30,7 @@ import kotlin.math.pow
 object Core {
 
 	private const val REACH_DISTANCE = 256.0
-	private const val PING_LIFETIME = 140 // 7 seconds in Game Ticks
+	private const val PING_LIFETIME = 6000 // 7 seconds in Game Ticks
 
 	private val config = PingWheelConfigHandler.getInstance().config
 	private var pingRepo = mutableListOf<PingData>()
